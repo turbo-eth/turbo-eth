@@ -1,0 +1,72 @@
+{
+  "name": "@turbo-eth/erc721-wagmi",
+  "author": "kames",
+  "module": "dist/erc721-wagmi.esm.js",
+  "version": "0.0.0-beta.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "watch": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "clean": "rm -rf node_modules/"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "size-limit": [
+    {
+      "path": "dist/erc721-wagmi.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/erc721-wagmi.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "devDependencies": {
+    "@babel/core": "7.18.5",
+    "@turbo-eth/core-sol": "0.0.0-beta.0",
+    "@size-limit/preset-small-lib": "^7.0.8",
+    "@types/node": "^18.0.0",
+    "@types/prop-types": "^15.7.5",
+    "@types/react": "^18.0.14",
+    "@types/react-dom": "^18.0.5",
+    "husky": "^8.0.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "size-limit": "^7.0.8",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.4.0",
+    "typescript": "^4.7.4"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "prop-types": "^15.8.1",
+    "wagmi": "0.4.12"
+  },
+  "peerDependencies": {
+    "@babel/core": "7.18.5",
+    "wagmi": "0.4.12"
+  }
+}

@@ -1,0 +1,191 @@
+@tailwind base;
+body {
+  padding: 0
+}
+a {
+  @apply text-blue-700 dark:text-blue-200 border-b-2 border-transparent;
+}
+
+a:hover {
+  @apply border-b-2 border-blue-700;
+}
+
+@tailwind components;
+
+@tailwind utilities;
+
+.min-h-vh {
+  min-height: 100vh;
+}
+
+.content p {
+  @apply my-2;
+}
+
+.content ul {
+  @apply my-6;
+}
+
+.react-tiny-popover-container {
+  z-index: 9999;
+}
+
+.min-h-vh {
+  min-height: 100vh;
+}
+
+.card {
+  @apply bg-white dark:bg-gray-700 dark:text-white border-2 dark:border-gray-700 rounded-lg p-6 shadow-sm hover:shadow-md hover:bg-white transition-all duration-300 ease-in-out;
+}
+
+.input {
+  @apply border-0 px-3 py-3 placeholder-neutral-400 text-gray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150
+}
+
+
+.btn {
+  @apply py-2 px-4 font-semibold rounded-md shadow-md focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-opacity-75 duration-200;
+}
+
+.btn-white {
+  @apply bg-white text-gray-600 hover:bg-gray-50 focus:ring-gray-400;
+}
+
+.btn-indigo {
+  @apply bg-indigo-500 text-white hover:bg-indigo-700 focus:ring-indigo-400;
+}
+.btn-purple {
+  @apply bg-purple-500 text-white hover:bg-purple-700 text-white focus:ring-purple-400;
+}
+
+.btn-purple-light {
+  @apply bg-purple-400 text-white hover:bg-purple-300 text-white hover:text-purple-700 focus:ring-purple-400;
+}
+
+.btn-red {
+  @apply bg-red-500 text-white hover:bg-red-700 text-white focus:ring-red-400;
+}
+.btn-green {
+  @apply bg-green-500 text-white hover:bg-green-400 focus:ring-green-400;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white hover:bg-blue-700 focus:ring-blue-400;
+}
+.btn-orange {
+  @apply bg-yellow-500 hover:bg-yellow-600 focus:ring-yellow-400 text-purple-600;
+}
+.btn-disabled {
+  @apply bg-gray-500 hover:bg-gray-700 focus:ring-gray-400;
+}
+.btn-gray {
+  @apply text-gray-700 bg-gray-200 hover:bg-gray-300 focus:ring-gray-400 shadow-none;
+}
+
+.btn-small {
+  @apply text-sm py-1 px-3;
+}
+.btn-xs {
+  @apply text-xs !important;
+}
+.btn-sm {
+  @apply text-sm;
+}
+.btn-lg {
+  @apply text-lg px-5 py-4;
+}
+.btn-xl {
+  @apply w-full flex items-center justify-center px-8 py-3 border text-base font-medium rounded-md md:py-4 md:text-lg md:px-10;
+}
+
+.tag {
+  @apply px-2 inline-flex text-xs leading-5 font-semibold rounded-lg;
+  padding-bottom: 0.125rem;
+  padding-top: 0.125rem;
+}
+
+.tag-base {
+  @apply text-base;
+}
+
+.tag-white {
+  @apply text-gray-700 bg-white;
+}
+.tag-cloud {
+  @apply text-gray-600 bg-gray-100;
+}
+.tag-smoke {
+  @apply text-gray-700 bg-gray-200;
+}
+.tag-gray {
+  @apply text-gray-100 bg-gray-700;
+}
+.tag-green {
+  @apply text-green-100 bg-green-800;
+}
+.tag-green-light {
+  @apply text-green-800 bg-green-200;
+}
+.tag-red {
+  @apply text-red-100 bg-red-800;
+}
+.tag-blue {
+  @apply text-blue-100 bg-blue-800;
+}
+.tag-indigo {
+  @apply text-indigo-100 bg-indigo-800;
+}
+.tag-indigo {
+  @apply text-purple-100 bg-purple-800;
+}
+.tag-orange {
+  @apply text-yellow-100 bg-yellow-800;
+}
+.tag-pink {
+  @apply text-pink-100 bg-pink-800;
+}
+.tag-purple {
+  @apply text-purple-100 bg-purple-800;
+}
+.tag-purple-light {
+  @apply text-purple-900 bg-purple-200;
+}
+
+.gradient-indigo {
+  @apply bg-gradient-to-b from-indigo-300 to-indigo-600;
+}
+.gradient-blue {
+  @apply bg-gradient-to-b from-blue-400 to-indigo-700;
+}
+
+.hex {
+  display: block;
+  margin: 0 auto;
+  position: relative;
+  width: 461.89px;
+  height: 400px; /* width * 0.866 */
+  background: white;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.4);
+  box-sizing: border-box;
+  -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+  -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+}
+
+.hex-background {
+  position: absolute;
+  background-color: orange; /*color of the main-background*/
+  top: 2px; /* equal to border thickness */
+  left: 2px; /* equal to border thickness */
+  width: 456px; /* container height - (border thickness * 2) */
+  height: 396px; /* container height - (border thickness * 2) */
+  -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+  -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+}
+
+.hex img {
+  position: absolute;
+  width: 100%; 
+  height: 100%; 
+  object-fit: cover;
+  -webkit-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+  -moz-clip-path: polygon(0% 50%, 25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%);
+}

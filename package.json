@@ -1,0 +1,45 @@
+{
+  "name": "turbo-eth",
+  "version": "0.0.0-beta.0",
+  "private": true,
+  "license": "MIT",
+  "workspaces": [
+    "apps/*",
+    "contracts/*",
+    "packages/*"
+  ],
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "wagmi": "0.4.2"
+      }
+    }
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "lab": "turbo run lab",
+    "clean": "turbo run clean",
+    "cleanself": "rm -rf ./node_modules && rm -rf ./dist && rm -rf ./build && rm -f pnpm-lock.yaml",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\""
+  },
+  "dependencies": {
+    "@babel/core": "7.18.5",
+    "@coinbase/wallet-sdk": "^3.3.0",
+    "eslint-config-custom": "^0.0.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "prettier": "^2.6.2",
+    "turbo": "latest"
+  },
+  "engines": {
+    "npm": ">=7.0.0",
+    "node": ">=14.0.0"
+  },
+  "packageManager": "pnpm@7.1.8"
+}
