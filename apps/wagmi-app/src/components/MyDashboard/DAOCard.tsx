@@ -26,7 +26,7 @@ const DAOCard = ({
   requests,
 }: DAOCardProps) => {
   return (
-    <div className="p-4 bg-white rounded text-sm w-full bg-base-100 divide-y cursor-pointer">
+    <div className="p-4 bg-white rounded text-sm w-full bg-base-100 divide-y cursor-pointer hover:ring-purple-400 hover:ring-2">
       <div className="flex items-center gap-2 pb-2">
         <h2 className="card-title text-black text-lg">{name}</h2>
         <div className="h-3 w-3 bg-green-300 rounded-full"></div>

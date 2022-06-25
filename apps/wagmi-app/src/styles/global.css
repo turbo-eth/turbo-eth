@@ -18,10 +18,6 @@ a:hover {
   min-height: 100vh;
 }
 
-.content p {
-  @apply my-2;
-}
-
 .content ul {
   @apply my-6;
 }
