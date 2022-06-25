@@ -15,18 +15,54 @@ import { ConnectButton } from "@rainbow-me/rainbowkit";
 import { useAccount } from "wagmi";
 // import { GovernorAlphaPropose } from '@democracy-labs/governor-alpha-wagmi'
 
+type UserDAOs = {
+  daos: DAO[];
+};
+
+interface DAO {
+  id: string;
+  name: string;
+  // myRoles: string[];
+  guilds: Guild[];
+}
+
+interface Guild {
+  name: string;
+  symbol: string;
+  members: string[];
+  proposals: Proposal[];
+}
+
+export interface Proposal {
+  id: string;
+  title: string;
+  body: string;
+  category: string;
+  createdAt: number;
+  parentGuild: string;
+  parentDAO: string;
+  isActive: boolean;
+  timeline: Timeline;
+}
+
+interface Timeline {
+  time: string;
+}
+
 const Index = () => {
   const { data } = useAccount();
 
   if (!data) {
     return (
-      <div className="w-screen flex flex-col h-screen bg-black items-center justify-center text-white text-center gap-3">
-        <h1 className="text-6xl font-bold">Decide the future of your DAO</h1>
-        <p className="text-2xl mb-10">
-          Sybil Resistant On-Chain Representative Democracy
-        </p>
-        <ConnectButton />
-      </div>
+      <IsMounted>
+        <div className="w-screen flex flex-col h-screen bg-black items-center justify-center text-white text-center gap-3">
+          <h1 className="text-6xl font-bold">Decide the future of your DAO</h1>
+          <p className="text-2xl mb-10">
+            Sybil Resistant On-Chain Representative Democracy
+          </p>
+          <ConnectButton />
+        </div>
+      </IsMounted>
     );
   }
 
@@ -88,21 +124,23 @@ const Index = () => {
           </div>
         </div>
         <div className="gap-3 text-sm">
-          <DAOCard
-            name="Soulcialites"
-            roleTier="Active Citizen"
-            skills={["Product Design", "Solidity"]}
-            activeProposals={3}
-            expectedEarnings={1250}
-            earningsToDate={2440}
-            requests={[
-              {
-                title: "Code review for new product",
-                category: "blocker",
-                guild: "Product Guild",
-              },
-            ]}
-          />
+          <IsMounted>
+            <DAOCard
+              name="Soulcialites"
+              roleTier="Active Citizen"
+              skills={["Product Design", "Solidity"]}
+              activeProposals={3}
+              expectedEarnings={1250}
+              earningsToDate={2440}
+              requests={[
+                {
+                  title: "Code review for new product",
+                  category: "blocker",
+                  guild: "Product Guild",
+                },
+              ]}
+            />
+          </IsMounted>
         </div>
       </div>
     </Main>

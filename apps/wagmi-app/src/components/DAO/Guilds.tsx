@@ -3,7 +3,7 @@ import React from "react";
 const Guilds = () => {
   return (
     <div className="bg-white p-4 space-y-3 -mt-24 mx-10 rounded">
-      <h1 className="text-xl text-black font-semibold">Your Guilds</h1>
+      <h1 className="text-2xl text-black font-semibold">Your Guilds</h1>
 
       <div className="relative overflow-x-auto sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
@@ -47,7 +47,7 @@ const Guilds = () => {
           </tbody>
         </table>
       </div>
-      <h1 className="text-xl text-black font-semibold">Other Guilds</h1>
+      <h1 className="text-2xl text-black font-semibold">Other Guilds</h1>
       <div className="relative overflow-x-auto sm:rounded-lg">
         <table className="w-full text-sm text-left text-gray-500 dark:text-gray-400">
           <thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
