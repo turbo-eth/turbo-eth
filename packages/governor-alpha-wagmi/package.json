@@ -50,7 +50,7 @@
     "ethers": "^5.6.8",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@democracy-labs/core-sol": "0.0.0-beta.0",
-    "@democracy-labs/governor-alpha-sol": "0.0.0-beta.0",
+    "@democracy-labs/governance-sol": "0.0.0-beta.0",
     "@types/node": "^18.0.0",
     "@types/prop-types": "^15.7.5",
     "@types/react": "^18.0.14",

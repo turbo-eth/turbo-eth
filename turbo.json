@@ -2,42 +2,42 @@
   "$schema": "https://turborepo.org/schema.json",
   "baseBranch": "origin/main",
   "pipeline": {
-      "chain": {
-        "dependsOn": ["^chain"],
-          "outputs": [""],
-          "inputs": ["contracts/**/*.sol"]
-      },
-      "compile": {
-        "dependsOn": ["^compile"],
-          "outputs": [""],
-          "inputs": ["contracts/**/*.sol"]
-      },
-      "dev": {
-          "outputs": [""]
-      },
-      "lint": {
-          "outputs": [""]
-      },
-      "watch": {
-          "dependsOn": ["^watch"]
-      },
-      "build": {
-          "dependsOn": ["^build"]
-        },
-        "clean": {
-            "dependsOn": ["^clean"]
-      },
-      "//#cleanself": {
-        "dependsOn": [],
-        "outputs": []
-      },
-      "lab": {
-          "dependsOn": [
-            "@democracy-labs/governor-alpha-sol#chain", 
-            "^watch", 
-            "@democracy-labs/demo-app#dev"
-          ],
-          "outputs": [""]
-      }
+    "chain": {
+      "dependsOn": ["^chain"],
+      "outputs": [""],
+      "inputs": ["contracts/**/*.sol"]
+    },
+    "compile": {
+      "dependsOn": ["^compile"],
+      "outputs": [""],
+      "inputs": ["contracts/**/*.sol"]
+    },
+    "dev": {
+      "outputs": [""]
+    },
+    "lint": {
+      "outputs": [""]
+    },
+    "watch": {
+      "dependsOn": ["^watch"]
+    },
+    "build": {
+      "dependsOn": ["^build"]
+    },
+    "clean": {
+      "dependsOn": ["^clean"]
+    },
+    "//#cleanself": {
+      "dependsOn": [],
+      "outputs": []
+    },
+    "lab": {
+      "dependsOn": [
+        "@democracy-labs/governance-sol#chain",
+        "^watch",
+        "@democracy-labs/demo-app#dev"
+      ],
+      "outputs": [""]
+    }
   }
 }

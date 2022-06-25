@@ -29,6 +29,7 @@ importers:
       '@democracy-labs/core-wagmi': 0.0.0-beta.0
       '@democracy-labs/erc20-wagmi': 0.0.0-beta.0
       '@democracy-labs/erc721-wagmi': 0.0.0-beta.0
+      '@democracy-labs/governance-sol': 0.0.0-beta.0
       '@democracy-labs/governor-alpha-wagmi': 0.0.0-beta.0
       '@next/bundle-analyzer': ^12.1.6
       '@rainbow-me/rainbowkit': 0.2.1
@@ -87,6 +88,7 @@ importers:
       '@democracy-labs/core-wagmi': link:../../packages/core-wagmi
       '@democracy-labs/erc20-wagmi': link:../../packages/erc20-wagmi
       '@democracy-labs/erc721-wagmi': link:../../packages/erc721-wagmi
+      '@democracy-labs/governance-sol': link:../../contracts/governance-sol
       '@democracy-labs/governor-alpha-wagmi': link:../../packages/governor-alpha-wagmi
       '@rainbow-me/rainbowkit': 0.2.1_ksvpodatviltilqty4m7gcxati
       classnames: 2.3.1
@@ -445,7 +447,7 @@ importers:
     specifiers:
       '@babel/core': 7.18.5
       '@democracy-labs/core-sol': 0.0.0-beta.0
-      '@democracy-labs/governor-alpha-sol': 0.0.0-beta.0
+      '@democracy-labs/governance-sol': 0.0.0-beta.0
       '@size-limit/preset-small-lib': ^7.0.8
       '@types/node': ^18.0.0
       '@types/prop-types': ^15.7.5
@@ -471,7 +473,7 @@ importers:
     devDependencies:
       '@babel/core': 7.18.5
       '@democracy-labs/core-sol': link:../../contracts/core-sol
-      '@democracy-labs/governor-alpha-sol': link:../../contracts/governance-sol
+      '@democracy-labs/governance-sol': link:../../contracts/governance-sol
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
@@ -15010,6 +15012,7 @@ packages:
     resolution: {integrity: sha512-s7PoyDv/II1ObgQunCbB9PdLmUcBZcnWOcxDh7O0N/UwDEsHyqkW+Qh28jW+mVuCdx7gLB0BotYI1Y6uI9iyew==}
     engines: {node: '>=4'}
     hasBin: true
+    requiresBuild: true
     dev: true
 
   /prettier/2.7.1:

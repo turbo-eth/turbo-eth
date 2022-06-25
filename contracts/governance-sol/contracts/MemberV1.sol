@@ -3,13 +3,18 @@ pragma solidity 0.8.15;
 
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 
-contract CitizenAlpha is ERC721 {
+contract MemberV1 is ERC721 {
   uint256 public totalCitizens;
 
   mapping(address => bool) private _isCitizen;
   mapping(address => string) private _citizenDID;
 
-  constructor(string memory name, string memory symbol) ERC721("Human", "HUM") {}
+  constructor(
+    string memory name,
+    string memory symbol,
+    address citizenV1,
+    address
+  ) ERC721(name, symbol) {}
 
   function issue(address to) external {
     isCitizen(to);

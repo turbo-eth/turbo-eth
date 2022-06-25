@@ -19,6 +19,7 @@
   "dependencies": {
     "@rainbow-me/rainbowkit": "0.2.1",
     "@democracy-labs/core-sol": "0.0.0-beta.0",
+    "@democracy-labs/governance-sol": "0.0.0-beta.0",
     "@democracy-labs/governor-alpha-wagmi": "0.0.0-beta.0",
     "@democracy-labs/core-wagmi": "0.0.0-beta.0",
     "@democracy-labs/erc20-wagmi": "0.0.0-beta.0",
