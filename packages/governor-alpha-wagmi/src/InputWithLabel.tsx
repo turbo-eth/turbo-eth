@@ -23,16 +23,16 @@ export const InputWithLabel = ({className,
  const containerClassName = classNames(className, 'InputWithLabel'); 
  return(
     <div className={containerClassName}>
-    <div className="flex items-center justify-center">
+    <div className="flex flex-col">
+      <label className="block py-2 bg-emerald-500 text-white rounded-smd">
+        <span className="uppercase text-xs font-bold">{label}</span>
+      </label>
       <input
         className="input"
         type={type}
         placeholder={placeholder}
         {...register(name, { required })}
       />
-      <label className="px-3 py-2 bg-emerald-500 text-white text-center rounded-smd ml-2">
-        <span className="uppercase text-xs font-bold">{label}</span>
-      </label>
     </div>
 </div>
 )}

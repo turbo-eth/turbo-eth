@@ -34,7 +34,7 @@
       "lab": {
           "dependsOn": [
             "^watch", 
-            "^chain", 
+            "@democracy-labs/governor-alpha-sol#chain", 
             "@democracy-labs/demo-app#dev"
           ],
           "outputs": [""]

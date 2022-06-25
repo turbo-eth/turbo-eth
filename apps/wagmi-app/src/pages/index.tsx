@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Main } from "@/templates/Main";
 import { Meta } from "@/templates/Meta";
 import { AppConfig } from "@/utils/AppConfig";
-
+import { GovernorAlphaPropose } from '@democracy-labs/governor-alpha-wagmi' 
 const Index = () => {
   return (
     <Main
@@ -22,35 +22,17 @@ const Index = () => {
           Sybil Resistant On-Chain Representative Democracy
         </h3>
       </div>
+
+
+
       <section className="py-10">
-        <div className="container mx-auto max-w-screen-xl">
-          <div className="grid grid-cols-12 gap-x-4">
-            <div className="card col-span-4">
-              <span className="text-2xl">🏗️</span>
-              <h3 className="text-xl font-semibold">TurboRepo + pNPM</h3>
-              <p className="">
-                High-performance build system and a fast, disk space efficient
-                package manager.
-              </p>
-            </div>
-            <div className="card col-span-4">
-              <span className="text-2xl">🌈</span>
-              <h3 className="text-xl font-semibold">Rainbow + WAGMI</h3>
-              <p className="">
-                Streamlined wallet integration and ready-to-go WAGMI component
-                catalog.
-              </p>
-            </div>
-            <div className="card col-span-4">
-              <span className="text-2xl">🛠️</span>
-              <h3 className="text-xl font-semibold">Hardhat + Foundry</h3>
-              <p className="">
-                Opinionated smart contract boilerplate with testing, linting,
-                forking, and more.
-              </p>
+        <div className="container mx-auto max-w-screen-md">
+            <div className='card'>
+              <h3 className='font-normal text-4xl'>Create A Proposal</h3>
+              <hr className="my-3" />
+              <GovernorAlphaPropose />
             </div>
           </div>
-        </div>
       </section>
     </Main>
   );

@@ -29,6 +29,7 @@ importers:
       '@democracy-labs/core-wagmi': 0.0.0-beta.0
       '@democracy-labs/erc20-wagmi': 0.0.0-beta.0
       '@democracy-labs/erc721-wagmi': 0.0.0-beta.0
+      '@democracy-labs/governor-alpha-wagmi': 0.0.0-beta.0
       '@next/bundle-analyzer': ^12.1.6
       '@rainbow-me/rainbowkit': 0.2.1
       '@testing-library/jest-dom': ^5.16.4
@@ -82,10 +83,11 @@ importers:
       typescript: ^4.7.4
       wagmi: 0.4.12
     dependencies:
-      '@democracy-labs/core-sol': link:../../contracts/governance-sol
+      '@democracy-labs/core-sol': link:../../contracts/core-sol
       '@democracy-labs/core-wagmi': link:../../packages/core-wagmi
       '@democracy-labs/erc20-wagmi': link:../../packages/erc20-wagmi
       '@democracy-labs/erc721-wagmi': link:../../packages/erc721-wagmi
+      '@democracy-labs/governor-alpha-wagmi': link:../../packages/governor-alpha-wagmi
       '@rainbow-me/rainbowkit': 0.2.1_ksvpodatviltilqty4m7gcxati
       classnames: 2.3.1
       ethers: 5.6.9
@@ -341,7 +343,7 @@ importers:
       wagmi: 0.4.12_2pvqx3wni2imkaucnfdtyrjuiq
     devDependencies:
       '@babel/core': 7.18.5
-      '@democracy-labs/core-sol': link:../../contracts/governance-sol
+      '@democracy-labs/core-sol': link:../../contracts/core-sol
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
@@ -383,7 +385,7 @@ importers:
       wagmi: 0.4.12_2pvqx3wni2imkaucnfdtyrjuiq
     devDependencies:
       '@babel/core': 7.18.5
-      '@democracy-labs/core-sol': link:../../contracts/governance-sol
+      '@democracy-labs/core-sol': link:../../contracts/core-sol
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
@@ -424,7 +426,7 @@ importers:
       wagmi: 0.4.12_2pvqx3wni2imkaucnfdtyrjuiq
     devDependencies:
       '@babel/core': 7.18.5
-      '@democracy-labs/core-sol': link:../../contracts/governance-sol
+      '@democracy-labs/core-sol': link:../../contracts/core-sol
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
@@ -443,6 +445,7 @@ importers:
     specifiers:
       '@babel/core': 7.18.5
       '@democracy-labs/core-sol': 0.0.0-beta.0
+      '@democracy-labs/governor-alpha-sol': 0.0.0-beta.0
       '@size-limit/preset-small-lib': ^7.0.8
       '@types/node': ^18.0.0
       '@types/prop-types': ^15.7.5
@@ -467,7 +470,8 @@ importers:
       wagmi: 0.4.12_2pvqx3wni2imkaucnfdtyrjuiq
     devDependencies:
       '@babel/core': 7.18.5
-      '@democracy-labs/core-sol': link:../../contracts/governance-sol
+      '@democracy-labs/core-sol': link:../../contracts/core-sol
+      '@democracy-labs/governor-alpha-sol': link:../../contracts/governance-sol
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
@@ -5328,7 +5332,7 @@ packages:
   /axios/0.21.4_debug@4.3.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.15.1_debug@4.3.4
+      follow-redirects: 1.15.1_debug@4.3.3
     transitivePeerDependencies:
       - debug
     dev: true
@@ -10077,18 +10081,6 @@ packages:
         optional: true
     dependencies:
       debug: 4.3.3
-    dev: true
-
-  /follow-redirects/1.15.1_debug@4.3.4:
-    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-    dependencies:
-      debug: 4.3.4
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -16462,7 +16454,7 @@ packages:
     dependencies:
       command-exists: 1.2.9
       commander: 3.0.2
-      follow-redirects: 1.15.1_debug@4.3.4
+      follow-redirects: 1.15.1_debug@4.3.3
       fs-extra: 0.30.0
       js-sha3: 0.8.0
       memorystream: 0.3.1
