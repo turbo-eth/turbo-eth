@@ -1,9 +1,9 @@
 pragma solidity ^0.8.10;
 pragma experimental ABIEncoderV2;
 
-import "./GovernorBravoInterfaces.sol";
+import "./interfaces/GovernorBravoInterfaces.sol";
 
-contract DemocracyAlpha is GovernorBravoDelegateStorageV1, GovernorBravoEvents {
+contract DemocracyV1 is GovernorBravoDelegateStorageV1, GovernorBravoEvents {
   /// @notice The name of this contract
   string public constant name = "Democracy Alpha";
 
@@ -41,14 +41,14 @@ contract DemocracyAlpha is GovernorBravoDelegateStorageV1, GovernorBravoEvents {
   /**
    * @notice Used to initialize the contract during delegator constructor
    * @param timelock_ The address of the Timelock
-   * @param comp_ The address of the COMP token
+   * @param guildAccesControl_ The address of the COMP token
    * @param votingPeriod_ The initial voting period
    * @param votingDelay_ The initial voting delay
    * @param proposalThreshold_ The initial proposal threshold
    */
   function initialize(
     address timelock_,
-    address comp_,
+    address guildAccesControl_,
     uint256 votingPeriod_,
     uint256 votingDelay_,
     uint256 proposalThreshold_
@@ -56,7 +56,7 @@ contract DemocracyAlpha is GovernorBravoDelegateStorageV1, GovernorBravoEvents {
     require(address(timelock) == address(0), "GovernorBravo::initialize: can only initialize once");
     require(msg.sender == admin, "GovernorBravo::initialize: admin only");
     require(timelock_ != address(0), "GovernorBravo::initialize: invalid timelock address");
-    require(comp_ != address(0), "GovernorBravo::initialize: invalid comp address");
+    require(guildAccesControl_ != address(0), "GovernorBravo::initialize: invalid comp address");
     require(
       votingPeriod_ >= MIN_VOTING_PERIOD && votingPeriod_ <= MAX_VOTING_PERIOD,
       "GovernorBravo::initialize: invalid voting period"
@@ -71,7 +71,7 @@ contract DemocracyAlpha is GovernorBravoDelegateStorageV1, GovernorBravoEvents {
     );
 
     timelock = TimelockInterface(timelock_);
-    comp = CompInterface(comp_);
+    guildAccesControl_ = guildAccesControl_;
     votingPeriod = votingPeriod_;
     votingDelay = votingDelay_;
     proposalThreshold = proposalThreshold_;

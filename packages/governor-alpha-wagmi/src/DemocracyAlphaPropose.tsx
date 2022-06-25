@@ -1,10 +1,10 @@
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
-import useERC20ContractWrite from './useGovernorAlphaContractWrite';
+import useDemocracyAlphaContractWrite from './useDemocracyAlphaContractWrite';
 import InputWithLabel from './InputWithLabel';
 
-interface GovernorAlphaProposeProps {
+interface DemocracyAlphaProposeProps {
   className?: string;
   onUpdate?: Function;
   defaults?: any;
@@ -12,12 +12,12 @@ interface GovernorAlphaProposeProps {
   symbol?: string;
 }
 
-export const GovernorAlphaPropose = ({
+export const DemocracyAlphaPropose = ({
   className,
   onUpdate,
   token
-}: GovernorAlphaProposeProps) => {
-  const styleForm = classNames(className, "GovernorAlphaPropose");
+}: DemocracyAlphaProposeProps) => {
+  const styleForm = classNames(className, "DemocracyAlphaPropose");
   
   const {
       register,
@@ -35,7 +35,7 @@ export const GovernorAlphaPropose = ({
 
 
     const watchAllFields = watch();
-    const { write } = useERC20ContractWrite(token, "propose", [
+    const { write } = useDemocracyAlphaContractWrite(token, "propose", [
       watchAllFields?.targets, 
       watchAllFields?.values, 
       watchAllFields?.signatures, 
@@ -97,4 +97,4 @@ export const GovernorAlphaPropose = ({
   );
 };
 
-export default GovernorAlphaPropose;
+export default DemocracyAlphaPropose;
