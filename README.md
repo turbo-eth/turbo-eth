@@ -58,7 +58,7 @@ The fastest way to start hacking is to run the `lab` task pipeline: starts local
       "outputs": [""]
     },
     "lab": {
-      "dependsOn": ["^watch", "^chain", "@turbo-eth/demo-app#dev"],
+      "dependsOn": ["^watch", "^chain", "@democracy-labs/demo-app#dev"],
       "outputs": [""]
     }
   }

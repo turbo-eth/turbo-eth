@@ -1,7 +1,7 @@
 export const AppConfig = {
   site_name: 'Starter',
-  title: 'TurboETH',
+  title: 'Soulcialites',
   emoji: '⚡',
-  description: 'Ethereum dApp Build System',
+  description: 'Sybil Resistant On-Chain Representative Democracy',
   locale: 'en',
 };

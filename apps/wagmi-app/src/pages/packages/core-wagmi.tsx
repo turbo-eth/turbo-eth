@@ -4,7 +4,7 @@ import {
   WalletEnsAddress,
   WalletEnsName,
   WalletNonce,
-} from "@turbo-eth/core-wagmi";
+} from "@democracy-labs/core-wagmi";
 
 import IsMounted from "@/components/IsMounated";
 import ModuleComponentPreview from "@/components/ModuleComponentPreview";

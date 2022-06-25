@@ -35,7 +35,7 @@
           "dependsOn": [
             "^watch", 
             "^chain", 
-            "@turbo-eth/demo-app#dev"
+            "@democracy-labs/demo-app#dev"
           ],
           "outputs": [""]
       }

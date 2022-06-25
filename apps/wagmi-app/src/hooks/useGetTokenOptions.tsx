@@ -1,5 +1,5 @@
-import TokenA from "@turbo-eth/core-sol/deployments/localhost/TokenA.json";
-import TokenB from "@turbo-eth/core-sol/deployments/localhost/TokenB.json";
+import TokenA from "@democracy-labs/core-sol/deployments/localhost/TokenA.json";
+import TokenB from "@democracy-labs/core-sol/deployments/localhost/TokenB.json";
 
 function useGetTokenOptions() {
   const optionsTokens = [

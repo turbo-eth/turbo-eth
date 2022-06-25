@@ -1,5 +1,5 @@
 {
-  "name": "@turbo-eth/erc721-wagmi",
+  "name": "@democracy-labs/erc721-wagmi",
   "author": "kames",
   "module": "dist/erc721-wagmi.esm.js",
   "version": "0.0.0-beta.0",
@@ -47,7 +47,7 @@
   "devDependencies": {
     "@babel/core": "7.18.5",
     "ethers": "^5.6.8",
-    "@turbo-eth/core-sol": "0.0.0-beta.0",
+    "@democracy-labs/core-sol": "0.0.0-beta.0",
     "@size-limit/preset-small-lib": "^7.0.8",
     "@types/node": "^18.0.0",
     "@types/prop-types": "^15.7.5",

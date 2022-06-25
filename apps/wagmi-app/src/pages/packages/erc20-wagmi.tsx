@@ -1,4 +1,4 @@
-import TokenA from "@turbo-eth/core-sol/deployments/localhost/TokenA.json";
+import TokenA from "@democracy-labs/core-sol/deployments/localhost/TokenA.json";
 import {
   ERC20Approve,
   ERC20Mint,
@@ -6,7 +6,7 @@ import {
   ERC20TransferFrom,
   WalletERC20Balance,
   WalletERC20Mint,
-} from "@turbo-eth/erc20-wagmi";
+} from "@democracy-labs/erc20-wagmi";
 
 import IsMounted from "@/components/IsMounated";
 import ModuleComponentPreview from "@/components/ModuleComponentPreview";

@@ -30,9 +30,9 @@
         "next/core-web-vitals",
         "plugin:prettier/recommended"
       ],
-      // "parserOptions": {
-      //   "project": "./tsconfig.json"
-      // },
+      "parserOptions": {
+        "project": "./tsconfig.json"
+      },
       "rules": {
         "prettier/prettier": [
           "error",

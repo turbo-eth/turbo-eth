@@ -25,14 +25,14 @@ importers:
     specifiers:
       '@commitlint/cli': ^16.3.0
       '@commitlint/config-conventional': ^16.2.4
+      '@democracy-labs/core-sol': 0.0.0-beta.0
+      '@democracy-labs/core-wagmi': 0.0.0-beta.0
+      '@democracy-labs/erc20-wagmi': 0.0.0-beta.0
+      '@democracy-labs/erc721-wagmi': 0.0.0-beta.0
       '@next/bundle-analyzer': ^12.1.6
       '@rainbow-me/rainbowkit': 0.2.1
       '@testing-library/jest-dom': ^5.16.4
       '@testing-library/react': ^13.3.0
-      '@turbo-eth/core-sol': 0.0.0-beta.0
-      '@turbo-eth/core-wagmi': 0.0.0-beta.0
-      '@turbo-eth/erc20-wagmi': 0.0.0-beta.0
-      '@turbo-eth/erc721-wagmi': 0.0.0-beta.0
       '@types/jest': ^28.1.0
       '@types/node': ^18.0.0
       '@types/react': ^18.0.14
@@ -82,11 +82,11 @@ importers:
       typescript: ^4.7.4
       wagmi: 0.4.12
     dependencies:
+      '@democracy-labs/core-sol': link:../../contracts/governance-sol
+      '@democracy-labs/core-wagmi': link:../../packages/core-wagmi
+      '@democracy-labs/erc20-wagmi': link:../../packages/erc20-wagmi
+      '@democracy-labs/erc721-wagmi': link:../../packages/erc721-wagmi
       '@rainbow-me/rainbowkit': 0.2.1_ksvpodatviltilqty4m7gcxati
-      '@turbo-eth/core-sol': link:../../contracts/core-sol
-      '@turbo-eth/core-wagmi': link:../../packages/core-wagmi
-      '@turbo-eth/erc20-wagmi': link:../../packages/erc20-wagmi
-      '@turbo-eth/erc721-wagmi': link:../../packages/erc721-wagmi
       classnames: 2.3.1
       ethers: 5.6.9
       next: 12.1.6_4cc5zw5azim2bix77d63le72su
@@ -229,11 +229,98 @@ importers:
       typechain: 7.0.0_typescript@4.7.4
       typescript: 4.7.4
 
+  contracts/governance-sol:
+    specifiers:
+      '@ethersproject/abi': 5.6.1
+      '@foundry-rs/hardhat': ^0.1.6
+      '@foundry-rs/hardhat-anvil': ^0.1.5
+      '@foundry-rs/hardhat-forge': ^0.1.7
+      '@nomiclabs/hardhat-ethers': 2.0.4
+      '@nomiclabs/hardhat-etherscan': 3.0.0
+      '@nomiclabs/hardhat-waffle': 2.0.2
+      '@openzeppelin/contracts': ^4.6.0
+      '@openzeppelin/hardhat-upgrades': 1.14.0
+      '@typechain/ethers-v5': 9.0.0
+      '@typechain/hardhat': 4.0.0
+      '@types/chai': 4.3.0
+      '@types/debug': 4.1.7
+      '@types/mocha': 9.1.0
+      '@types/node': ^18.0.0
+      base64-sol: 1.1.0
+      chai: 4.3.6
+      chalk: 5.0.0
+      debug: 4.3.3
+      ethereum-waffle: 3.4.0
+      ethers: ^5.6.8
+      hardhat: 2.8.3
+      hardhat-abi-exporter: 2.8.0
+      hardhat-dependency-compiler: 1.1.2
+      hardhat-deploy: 0.10.5
+      hardhat-deploy-ethers: 0.3.0-beta.13
+      hardhat-ethers: 1.0.1
+      hardhat-gas-reporter: 1.0.7
+      hardhat-log-remover: 2.0.2
+      husky: ^8.0.1
+      node-watch: 0.7.3
+      prettier: ^2.6.2
+      prettier-plugin-solidity: 1.0.0-beta.19
+      solc: 0.8.13
+      solhint: 3.3.6
+      solidity-coverage: 0.7.18
+      solidity-docgen: 0.5.16
+      ts-generator: 0.1.1
+      ts-node: ^10.8.1
+      typechain: 7.0.0
+      typescript: ^4.7.4
+    dependencies:
+      '@foundry-rs/hardhat': 0.1.6_zjbln5h3nzljmkxmegquyyw33y
+      '@foundry-rs/hardhat-anvil': 0.1.5_o5mk4e6m2y2skesa647kuf7m4q
+      '@foundry-rs/hardhat-forge': 0.1.7_o5mk4e6m2y2skesa647kuf7m4q
+      '@openzeppelin/contracts': 4.6.0
+    devDependencies:
+      '@ethersproject/abi': 5.6.1
+      '@nomiclabs/hardhat-ethers': 2.0.4_ethers@5.6.9+hardhat@2.8.3
+      '@nomiclabs/hardhat-etherscan': 3.0.0_hardhat@2.8.3
+      '@nomiclabs/hardhat-waffle': 2.0.2_wjbclj3njsvyjubdzomma5wsge
+      '@openzeppelin/hardhat-upgrades': 1.14.0_obecqhgvcrl56ghqkup63xikwu
+      '@typechain/ethers-v5': 9.0.0_csa55wlxob357ut4j3iitrjg7e
+      '@typechain/hardhat': 4.0.0_7333vdtgmqv2zrljreewz7fnqi
+      '@types/chai': 4.3.0
+      '@types/debug': 4.1.7
+      '@types/mocha': 9.1.0
+      '@types/node': 18.0.0
+      base64-sol: 1.1.0
+      chai: 4.3.6
+      chalk: 5.0.0
+      debug: 4.3.3
+      ethereum-waffle: 3.4.0_typescript@4.7.4
+      ethers: 5.6.9
+      hardhat: 2.8.3
+      hardhat-abi-exporter: 2.8.0_hardhat@2.8.3
+      hardhat-dependency-compiler: 1.1.2_hardhat@2.8.3
+      hardhat-deploy: 0.10.5_qzwjtkh7imp4xra2k6nxwcvvga
+      hardhat-deploy-ethers: 0.3.0-beta.13_ethers@5.6.9+hardhat@2.8.3
+      hardhat-ethers: 1.0.1
+      hardhat-gas-reporter: 1.0.7_hardhat@2.8.3
+      hardhat-log-remover: 2.0.2_hardhat@2.8.3
+      husky: 8.0.1
+      node-watch: 0.7.3
+      prettier: 2.7.1
+      prettier-plugin-solidity: 1.0.0-beta.19_prettier@2.7.1
+      solc: 0.8.13_debug@4.3.3
+      solhint: 3.3.6
+      solidity-coverage: 0.7.18
+      solidity-docgen: 0.5.16
+      ts-generator: 0.1.1
+      ts-node: 10.8.1_qiyc72axg2v44xl4yovan2v55u
+      typechain: 7.0.0_typescript@4.7.4
+      typescript: 4.7.4
+
   packages/core-wagmi:
     specifiers:
       '@babel/core': 7.18.5
+      '@democracy-labs/core-sol': 0.0.0-beta.0
       '@size-limit/preset-small-lib': ^7.0.8
-      '@turbo-eth/core-sol': 0.0.0-beta.0
       '@types/node': ^18.0.0
       '@types/prop-types': ^15.7.5
       '@types/react': ^18.0.14
@@ -254,8 +341,8 @@ importers:
       wagmi: 0.4.12_2pvqx3wni2imkaucnfdtyrjuiq
     devDependencies:
       '@babel/core': 7.18.5
+      '@democracy-labs/core-sol': link:../../contracts/governance-sol
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
-      '@turbo-eth/core-sol': link:../../contracts/core-sol
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
       '@types/react': 18.0.14
@@ -271,8 +358,8 @@ importers:
   packages/erc20-wagmi:
     specifiers:
       '@babel/core': 7.18.5
+      '@democracy-labs/core-sol': 0.0.0-beta.0
       '@size-limit/preset-small-lib': ^7.0.8
-      '@turbo-eth/core-sol': 0.0.0-beta.0
       '@types/node': ^18.0.0
       '@types/prop-types': ^15.7.5
       '@types/react': ^18.0.14
@@ -296,8 +383,8 @@ importers:
       wagmi: 0.4.12_2pvqx3wni2imkaucnfdtyrjuiq
     devDependencies:
       '@babel/core': 7.18.5
+      '@democracy-labs/core-sol': link:../../contracts/governance-sol
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
-      '@turbo-eth/core-sol': link:../../contracts/core-sol
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
       '@types/react': 18.0.14
@@ -314,8 +401,8 @@ importers:
   packages/erc721-wagmi:
     specifiers:
       '@babel/core': 7.18.5
+      '@democracy-labs/core-sol': 0.0.0-beta.0
       '@size-limit/preset-small-lib': ^7.0.8
-      '@turbo-eth/core-sol': 0.0.0-beta.0
       '@types/node': ^18.0.0
       '@types/prop-types': ^15.7.5
       '@types/react': ^18.0.14
@@ -337,8 +424,51 @@ importers:
       wagmi: 0.4.12_2pvqx3wni2imkaucnfdtyrjuiq
     devDependencies:
       '@babel/core': 7.18.5
+      '@democracy-labs/core-sol': link:../../contracts/governance-sol
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
-      '@turbo-eth/core-sol': link:../../contracts/core-sol
+      '@types/node': 18.0.0
+      '@types/prop-types': 15.7.5
+      '@types/react': 18.0.14
+      '@types/react-dom': 18.0.5
+      ethers: 5.6.9
+      husky: 8.0.1
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
+      size-limit: 7.0.8
+      tsdx: 0.14.1_@types+node@18.0.0
+      tslib: 2.4.0
+      typescript: 4.7.4
+
+  packages/governor-alpha-wagmi:
+    specifiers:
+      '@babel/core': 7.18.5
+      '@democracy-labs/core-sol': 0.0.0-beta.0
+      '@size-limit/preset-small-lib': ^7.0.8
+      '@types/node': ^18.0.0
+      '@types/prop-types': ^15.7.5
+      '@types/react': ^18.0.14
+      '@types/react-dom': ^18.0.5
+      classnames: ^2.3.1
+      ethers: ^5.6.8
+      husky: ^8.0.1
+      prop-types: ^15.8.1
+      react: 18.2.0
+      react-dom: 18.2.0
+      react-hook-form: ^7.27.1
+      size-limit: ^7.0.8
+      tsdx: ^0.14.1
+      tslib: ^2.4.0
+      typescript: ^4.7.4
+      wagmi: 0.4.12
+    dependencies:
+      classnames: 2.3.1
+      prop-types: 15.8.1
+      react-hook-form: 7.32.2_react@18.2.0
+      wagmi: 0.4.12_2pvqx3wni2imkaucnfdtyrjuiq
+    devDependencies:
+      '@babel/core': 7.18.5
+      '@democracy-labs/core-sol': link:../../contracts/governance-sol
+      '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
       '@types/react': 18.0.14
@@ -5198,7 +5328,7 @@ packages:
   /axios/0.21.4_debug@4.3.4:
     resolution: {integrity: sha512-ut5vewkiu8jjGBdqpM44XxjuCjq9LAKeHVmoVfHVzy8eHgxxq8SbAVQNovDA8mVi05kP0Ea/n/UzcSHcTJQfNg==}
     dependencies:
-      follow-redirects: 1.15.1_debug@4.3.3
+      follow-redirects: 1.15.1_debug@4.3.4
     transitivePeerDependencies:
       - debug
     dev: true
@@ -9947,6 +10077,18 @@ packages:
         optional: true
     dependencies:
       debug: 4.3.3
+    dev: true
+
+  /follow-redirects/1.15.1_debug@4.3.4:
+    resolution: {integrity: sha512-yLAMQs+k0b2m7cVxpS1VKJVvoz7SS9Td1zss3XRwXj+ZDH00RJgnuLx7E44wx02kQLrdM3aOOy+FpzS7+8OizA==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
+    dependencies:
+      debug: 4.3.4
 
   /for-each/0.3.3:
     resolution: {integrity: sha512-jqYfLp7mo9vIyQf8ykW2v7A+2N4QjeCeI5+Dz9XraiO1ign81wjiH7Fb9vSOWvQfNtmSa4H2RoQTrrXivdUZmw==}
@@ -16320,7 +16462,7 @@ packages:
     dependencies:
       command-exists: 1.2.9
       commander: 3.0.2
-      follow-redirects: 1.15.1_debug@4.3.3
+      follow-redirects: 1.15.1_debug@4.3.4
       fs-extra: 0.30.0
       js-sha3: 0.8.0
       memorystream: 0.3.1
