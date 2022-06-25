@@ -23,6 +23,7 @@
     "lint": "turbo run lint",
     "lab": "turbo run lab",
     "clean": "turbo run clean",
+    "compile": "turbo run compile",
     "cleanself": "rm -rf ./node_modules && rm -rf ./dist && rm -rf ./build && rm -f pnpm-lock.yaml",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
