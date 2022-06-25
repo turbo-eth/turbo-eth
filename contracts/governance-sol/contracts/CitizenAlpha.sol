@@ -28,7 +28,7 @@ contract CitizenAlpha is ERC721 {
     return _citizenDID[citizen];
   }
 
-  function setDID(string did) public returns (string memory) {
+  function setDID(string calldata did) public returns (string memory) {
     return _citizenDID[msg.sender] = did;
   }
 
