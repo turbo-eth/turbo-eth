@@ -3,22 +3,6 @@
 ![TS](https://badgen.net/badge/-/TypeScript?icon=typescript&label&labelColor=blue&color=555555)
 [![GPLv3 license](https://img.shields.io/badge/License-MIT-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
 
-Turbo ETH is an Ethereum dApp Build System; with a suite of tools to start building production ready dApps today.
-
-**Boilerplate:**
-
-- Application ([RainbowKit](https://www.rainbowkit.com/) + Tailwind + Next)
-- Smart Contract ([Hardhat](https://hardhat.org/) + [Foundry](https://getfoundry.sh/))
-- Zero-config TypeScript Modules: ([TSDX](https://tsdx.io/))
-
-The TurboETH build system uses [Turborepo](https://turborepo.org/) and pNPM; a high-performance build system and a fast, disk space efficient package manager.
-
-- Incremental builds
-- Content Aware Hashing
-- Remote Caching
-- Parallel execution
-- Task pipelines
-
 ### Installation & Usage
 
 ```sh
