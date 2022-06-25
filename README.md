@@ -1,6 +1,4 @@
-![banner](https://user-images.githubusercontent.com/3408362/174462135-3aaeefba-554a-40d7-bd58-f58bf20725cb.png)
-
-# ⚡ Turbo ETH (Beta)
+# Soulcialites Labs
 
 ![TS](https://badgen.net/badge/-/TypeScript?icon=typescript&label&labelColor=blue&color=555555)
 [![GPLv3 license](https://img.shields.io/badge/License-MIT-blue.svg)](http://perso.crans.org/besson/LICENSE.html)
@@ -69,11 +67,11 @@ The fastest way to start hacking is to run the `lab` task pipeline: starts local
     },
     "watch": {
       "dependsOn": ["^watch"],
-      "outputs": [""],
+      "outputs": [""]
     },
     "dev": {
       "dependsOn": ["^dev"],
-      "outputs": [""],
+      "outputs": [""]
     },
     "lab": {
       "dependsOn": ["^watch", "^chain", "@turbo-eth/demo-app#dev"],
