@@ -98,4 +98,5 @@ The monorepo includes 3 primary folders
 - [TSDX](https://tsdx.io/)
 
 <hr />
-Copyright 2022 (Kames Geraghty)[https://kames.me]
+
+Copyright 2022 [Kames Geraghty](https://kames.me)
