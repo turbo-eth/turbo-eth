@@ -5,10 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:prd": "next build ; next export ; touch out/.nojekyll",
+    "export": "next export",
     "start": "next start",
     "build-stats": "cross-env ANALYZE=true npm run build",
-    "export": "next export",
-    "build-prod": "run-s clean build export",
     "cleanup": "rimraf .next out",
     "clean": "rm -rf node_modules/",
     "lint": "next lint",
