@@ -13,7 +13,7 @@
     "clean": "rm -rf node_modules/",
     "lint": "next lint",
     "check-types": "tsc --noEmit --pretty",
-    "test": "jest --watch"
+    "test": "jest --watch"  
   },
   "dependencies": {
     "@rainbow-me/rainbowkit": "0.2.1",
