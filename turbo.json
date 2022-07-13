@@ -1,9 +1,19 @@
 {
   "$schema": "https://turborepo.org/schema.json",
   "baseBranch": "origin/main",
+  "globalDependencies": [
+    "$GITHUB_TOKEN",
+    "tsconfig.json",
+    ".env.*"
+  ],
   "pipeline": {
       "chain": {
         "dependsOn": ["^chain"],
+          "outputs": [""],
+          "inputs": ["contracts/**/*.sol"]
+      },
+      "chain:fork": {
+        "dependsOn": ["^chain:fork"],
           "outputs": [""],
           "inputs": ["contracts/**/*.sol"]
       },
@@ -23,8 +33,12 @@
       },
       "build": {
           "dependsOn": ["^build"]
-        },
-        "clean": {
+      },
+      "build:prd": {
+          "dependsOn": ["^build:prd"],
+          "outputs": [".next", "out"]
+      },
+      "clean": {
             "dependsOn": ["^clean"]
       },
       "//#cleanself": {
@@ -35,9 +49,16 @@
           "dependsOn": [
             "^watch", 
             "^chain", 
-            "@turbo-eth/demo-app#dev"
+            "@web3-citizen/app-react#dev"
           ],
           "outputs": [""]
+      },
+      "lab:fork": {
+          "dependsOn": [
+            "^watch", 
+            "chain:fork", 
+            "@web3-citizen/app-react#dev"
+          ]
       }
   }
 }

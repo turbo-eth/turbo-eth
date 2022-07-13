@@ -19,9 +19,13 @@
   },
   "scripts": {
     "build": "turbo run build",
+    "build:prd": "turbo run build:prd",
+    "compile": "turbo run compile",
     "dev": "turbo run dev --parallel",
     "lint": "turbo run lint",
+    "chain": "turbo run chain",
     "lab": "turbo run lab",
+    "lab:fork": "turbo run lab:fork",
     "clean": "turbo run clean",
     "cleanself": "rm -rf ./node_modules && rm -rf ./dist && rm -rf ./build && rm -f pnpm-lock.yaml",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
