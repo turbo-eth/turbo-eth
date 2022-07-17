@@ -2,10 +2,10 @@ import { utils } from 'ethers';
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
-import useERC20ContractWrite from './useERC20ContractWrite';
-import InputWithLabel from './InputWithLabel';
+import useERC20ContractWrite from '../hooks/useERC20Write';
+import {InputWithLabel} from '../InputWithLabel';
 
-interface ERC20MintProps {
+interface ERC20TransferFromProps {
   className?: string;
   onUpdate?: Function;
   defaults?: any;
@@ -13,12 +13,12 @@ interface ERC20MintProps {
   symbol?: string;
 }
 
-export const ERC20Mint = ({
+export const ERC20TransferFrom = ({
   className,
   onUpdate,
   token
-}: ERC20MintProps) => {
-  const styleForm = classNames(className, "ERC20Mint");
+}: ERC20TransferFromProps) => {
+  const styleForm = classNames(className, "ERC20TransferFrom");
   
   const {
       register,
@@ -27,23 +27,30 @@ export const ERC20Mint = ({
       formState: {  },
     } = useForm({
         defaultValues: {
+            from: '',
             to: '',
             amount: '',
         },
     });
     const watchAllFields = watch();
-    const { write } = useERC20ContractWrite(token, "mint", [watchAllFields?.to, utils.parseEther(watchAllFields.amount || '0')]);
+    const { write } = useERC20ContractWrite(token, "transferFrom", [watchAllFields?.from, watchAllFields?.to, utils.parseEther(watchAllFields.amount || '0')]);
     const onSubmit = (_data: any) => {
         write();
         if(onUpdate) onUpdate(_data);
     };
-
 
   return (
     <div className={styleForm}>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mt-4">
           <InputWithLabel
+            name="from"
+            label="From"
+            placeholder="0x000...000"
+            register={register}
+          />
+          <InputWithLabel
+          className='mt-3'
             name="to"
             label="To"
             placeholder="0x000...000"
@@ -68,4 +75,4 @@ export const ERC20Mint = ({
   );
 };
 
-export default ERC20Mint;
+export default ERC20TransferFrom;

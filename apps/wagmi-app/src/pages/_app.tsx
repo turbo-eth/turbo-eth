@@ -66,9 +66,7 @@ function MyApp({ Component, pageProps }: AppProps) {
   return (
     <WagmiConfig client={wagmiClient}>
       <RainbowKitProvider appInfo={demoAppInfo} chains={chains}>
-        {/* <ModalProvider> */}
         <Component {...pageProps} />
-        {/* </ModalProvider> */}
       </RainbowKitProvider>
     </WagmiConfig>
   );

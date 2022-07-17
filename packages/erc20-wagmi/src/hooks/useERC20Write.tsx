@@ -1,11 +1,12 @@
 import { useContractWrite, erc20ABI } from 'wagmi';
+import { useLogContractWrite } from '@turbo-eth/core-wagmi' 
 
-export function useERC20ContractRead(
+export function useERC20Write(
   address: string,
   method: string,
   args: any[]
 ): any {
-  return useContractWrite(
+  return useLogContractWrite(useContractWrite(
     {
       addressOrName: address,
       contractInterface: erc20ABI,
@@ -14,7 +15,7 @@ export function useERC20ContractRead(
     {
       args: args,
     }
-  );
+  ));
 }
 
-export default useERC20ContractRead;
+export default useERC20Write;

@@ -37,23 +37,9 @@ const Main = (props: IMainProps) => (
         <div className="mb-3 flex items-center justify-center">
           <ul className="flex flex-wrap text-sm">
             <li className="mr-6">
-              <Link href="/">
-                <a className="border-none text-gray-700 hover:text-gray-900 dark:text-white hover:dark:text-neutral-100">
-                  Home
-                </a>
-              </Link>
-            </li>
-            <li className="mr-6">
               <Link href="/dashboard/">
                 <a className="border-none text-gray-700 hover:text-gray-900 dark:text-white hover:dark:text-neutral-100">
                   Dashboard
-                </a>
-              </Link>
-            </li>
-            <li className="mr-6">
-              <Link href="/about/">
-                <a className="border-none text-gray-700 hover:text-gray-900 dark:text-white hover:dark:text-neutral-100">
-                  About
                 </a>
               </Link>
             </li>

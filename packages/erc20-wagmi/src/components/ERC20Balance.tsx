@@ -2,26 +2,24 @@ import * as React from 'react';
 
 import classNames from 'classnames';
 import { utils } from 'ethers';
-import useERC20ContractRead from './useERC20ContractRead';
+import useERC20ContractRead from '../hooks/useERC20Read';
 
 interface ERC20BalanceProps {
   className?: string;
-  account?: string;
-  token: string;
+  userAddress?: string;
+  contractAddress: string;
 }
 
 export const ERC20Balance = ({
   className,
-  account,
-  token,
+  userAddress,
+  contractAddress,
 }: ERC20BalanceProps) => {
   const classes = classNames(className, 'ERC20Balance');
 
-  const { data, isError, isLoading } = useERC20ContractRead(token, 'balanceOf', [
-    account,
+  const { data, isError, isLoading } = useERC20ContractRead(contractAddress, 'balanceOf', [
+    userAddress,
   ]);
-
-  console.log(data);
 
   if (isError || isLoading) return null;
   return <div className={classes}>{utils.formatEther(data || '0')}</div>;

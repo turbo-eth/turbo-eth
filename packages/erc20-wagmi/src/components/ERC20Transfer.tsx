@@ -2,8 +2,8 @@ import { utils } from 'ethers';
 import * as React from "react";
 import { useForm } from "react-hook-form";
 import classNames from "classnames";
-import useERC20ContractWrite from './useERC20ContractWrite';
-import InputWithLabel from './InputWithLabel';
+import useERC20ContractWrite from '../hooks/useERC20Write';
+import InputWithLabel from '../InputWithLabel';
 
 interface ERC20TransferProps {
   className?: string;

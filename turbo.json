@@ -53,19 +53,11 @@
           ],
           "outputs": [""]
       },
-      "lab:demo": {
-          "dependsOn": [
-            "^watch", 
-            "^chain", 
-            "@turbo-eth/demo-app#dev"
-          ],
-          "outputs": [""]
-      },
       "lab:fork": {
           "dependsOn": [
             "^watch", 
             "chain:fork", 
-            "@turbo-eth/demo-app#dev"
+            "@turbo-eth/wagmi-app#dev"
           ]
       }
   }
