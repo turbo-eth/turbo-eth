@@ -1,5 +1,4 @@
-import { useContractWrite } from 'wagmi';
-import MintableERC20_ABI from './MintableERC20.json';
+import { useContractWrite, erc20ABI } from 'wagmi';
 
 export function useERC20ContractRead(
   address: string,
@@ -9,7 +8,7 @@ export function useERC20ContractRead(
   return useContractWrite(
     {
       addressOrName: address,
-      contractInterface: MintableERC20_ABI,
+      contractInterface: erc20ABI,
     },
     method,
     {

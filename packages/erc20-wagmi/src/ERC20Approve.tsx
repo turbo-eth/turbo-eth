@@ -7,16 +7,16 @@ import InputWithLabel from './InputWithLabel';
 
 interface ERC20ApproveProps {
   className?: string;
-  onUpdate?: Function;
+  contractAddress: string;
   defaults?: any;
-  token: string;
   symbol?: string;
+  onUpdate?: Function;
 }
 
 export const ERC20Approve = ({
   className,
   onUpdate,
-  token
+  contractAddress: token
 }: ERC20ApproveProps) => {
   const styleForm = classNames(className, "ERC20Approve");
   

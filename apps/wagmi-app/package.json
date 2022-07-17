@@ -1,5 +1,5 @@
 {
-  "name": "@turbo-eth/demo-app",
+  "name": "@turbo-eth/wagmi-app",
   "version": "0.0.0-beta.0",
   "private": true,
   "scripts": {

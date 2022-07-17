@@ -70,7 +70,7 @@ const Main = (props: IMainProps) => (
           </ul>
         </div>
         <div className="">
-          © Copyright {new Date().getFullYear()} Kames Geraghty
+          © Copyright {new Date().getFullYear()} {AppConfig.title}
         </div>
         <ColorMode className="mt-3" />
       </div>

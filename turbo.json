@@ -49,7 +49,15 @@
           "dependsOn": [
             "^watch", 
             "^chain", 
-            "@web3-citizen/app-react#dev"
+            "@turbo-eth/wagmi-app#dev"
+          ],
+          "outputs": [""]
+      },
+      "lab:demo": {
+          "dependsOn": [
+            "^watch", 
+            "^chain", 
+            "@turbo-eth/demo-app#dev"
           ],
           "outputs": [""]
       },
@@ -57,7 +65,7 @@
           "dependsOn": [
             "^watch", 
             "chain:fork", 
-            "@web3-citizen/app-react#dev"
+            "@turbo-eth/demo-app#dev"
           ]
       }
   }
