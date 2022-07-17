@@ -23,7 +23,7 @@ export const ModuleComponentPreview = ({
     <div className={containerClassName}>
       <div className="flex items-center justify-between">
         <h4 className="inline-block text-xl font-semibold">{title}</h4>
-        <a className="inline-block" href={url}>
+        <a className="inline-block" href={url} target="_blank" >
           View Code
         </a>
       </div>

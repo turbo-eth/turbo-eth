@@ -10,6 +10,8 @@
 
 .envrc
 
+deployments/localhost
+
 abis
 artifacts
 cache

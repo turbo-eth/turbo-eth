@@ -1,8 +1,22 @@
 import { HardhatUserConfig } from 'hardhat/config';
+import { HardhatNetworkAccountUserConfig } from 'hardhat/types';
 
-const alchemyUrl = process.env.ALCHEMY_URL;
-const infuraApiKey = process.env.INFURA_API_KEY;
-const mnemonic = process.env.HDWALLET_MNEMONIC;
+// Accounts
+const TESTNET_PK_DEPLOYER = process.env.TESTNET_PK_DEPLOYER || '';
+const MAINNET_PK_DEPLOYER = process.env.MAINNET_PK_DEPLOYER || '';
+
+// Json RPC Endpoints
+const ARCHIVE_NODE_RPC_URL = process.env.ARCHIVE_NODE_RPC_URL;
+const ETHEREUM_MAINNET_RPC_URL = process.env.ETHEREUM_MAINNET_RPC_URL;
+const ETHEREUM_TESTNET_RPC_URL = process.env.ETHEREUM_TESTNET_RPC_URL;
+const POLYGON_MAINNET_RPC_URL = process.env.POLYGON_MAINNET_RPC_URL;
+const POLYGON_TESTNET_RPC_URL = process.env.POLYGON_TESTNET_RPC_URL;
+const OPTIMISM_MAINNET_RPC_URL = process.env.OPTIMISM_MAINNET_RPC_URL;
+const OPTIMISM_TESTNET_RPC_URL = process.env.OPTIMISM_TESTNET_RPC_URL;
+
+// Forking
+const FORK_ENABLED = process.env.FORK_ENABLED;
+const FORK_BLOCK_NUMBER = process.env.FORK_BLOCK_NUMBER;
 
 const networks: HardhatUserConfig['networks'] = {
   coverage: {
@@ -17,83 +31,61 @@ const networks: HardhatUserConfig['networks'] = {
   },
 };
 
-if (alchemyUrl && process.env.FORK_ENABLED && mnemonic) {
+if (MAINNET_PK_DEPLOYER && ETHEREUM_MAINNET_RPC_URL) {
+  networks.mainnet = {
+    url: ETHEREUM_MAINNET_RPC_URL,
+    accounts: [MAINNET_PK_DEPLOYER as unknown as HardhatNetworkAccountUserConfig],
+  };
+}
+
+if (TESTNET_PK_DEPLOYER && ETHEREUM_TESTNET_RPC_URL) {
+  networks.mainnet = {
+    url: ETHEREUM_MAINNET_RPC_URL,
+    accounts: [MAINNET_PK_DEPLOYER as unknown as HardhatNetworkAccountUserConfig],
+  };
+}
+
+if (MAINNET_PK_DEPLOYER && POLYGON_MAINNET_RPC_URL) {
+  networks.mainnet = {
+    url: POLYGON_MAINNET_RPC_URL,
+    accounts: [MAINNET_PK_DEPLOYER as unknown as HardhatNetworkAccountUserConfig],
+  };
+}
+
+if (TESTNET_PK_DEPLOYER && POLYGON_TESTNET_RPC_URL) {
+  networks.mainnet = {
+    url: POLYGON_MAINNET_RPC_URL,
+    accounts: [MAINNET_PK_DEPLOYER as unknown as HardhatNetworkAccountUserConfig],
+  };
+}
+
+if (MAINNET_PK_DEPLOYER && OPTIMISM_MAINNET_RPC_URL) {
+  networks.mainnet = {
+    url: OPTIMISM_MAINNET_RPC_URL,
+    accounts: [MAINNET_PK_DEPLOYER as unknown as HardhatNetworkAccountUserConfig],
+  };
+}
+
+if (TESTNET_PK_DEPLOYER && OPTIMISM_TESTNET_RPC_URL) {
+  networks.mainnet = {
+    url: OPTIMISM_MAINNET_RPC_URL,
+    accounts: [MAINNET_PK_DEPLOYER as unknown as HardhatNetworkAccountUserConfig],
+  };
+}
+
+if (ARCHIVE_NODE_RPC_URL && FORK_ENABLED) {
   networks.hardhat = {
     chainId: 1,
+    hardfork: 'istanbul',
     forking: {
-      url: alchemyUrl,
-    },
-    accounts: {
-      mnemonic,
+      url: ARCHIVE_NODE_RPC_URL,
+      blockNumber: Number(FORK_BLOCK_NUMBER) || 0,
     },
   };
 } else {
   networks.hardhat = {
     allowUnlimitedContractSize: true,
   };
-}
-
-if (mnemonic) {
-  networks.xdai = {
-    chainId: 100,
-    url: 'https://rpc.xdaichain.com/',
-    accounts: {
-      mnemonic,
-    },
-  };
-  networks.poaSokol = {
-    chainId: 77,
-    url: 'https://sokol.poa.network',
-    accounts: {
-      mnemonic,
-    },
-  };
-  networks.matic = {
-    chainId: 137,
-    url: 'https://rpc-mainnet.maticvigil.com',
-    accounts: {
-      mnemonic,
-    },
-  };
-  networks.mumbai = {
-    chainId: 80001,
-    url: 'https://rpc-mumbai.maticvigil.com',
-    accounts: {
-      mnemonic,
-    },
-  };
-}
-
-if (infuraApiKey && mnemonic) {
-  networks.kovan = {
-    url: `https://kovan.infura.io/v3/${infuraApiKey}`,
-    accounts: {
-      mnemonic,
-    },
-  };
-
-  networks.ropsten = {
-    url: `https://ropsten.infura.io/v3/${infuraApiKey}`,
-    accounts: {
-      mnemonic,
-    },
-  };
-
-  networks.rinkeby = {
-    url: `https://rinkeby.infura.io/v3/${infuraApiKey}`,
-    accounts: {
-      mnemonic,
-    },
-  };
-
-  networks.mainnet = {
-    url: alchemyUrl,
-    accounts: {
-      mnemonic,
-    },
-  };
-} else {
-  console.warn('No infura or hdwallet available for testnets');
 }
 
 export default networks;

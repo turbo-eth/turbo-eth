@@ -9,12 +9,12 @@ interface BalanceProps {
 
 export const Balance = ({className, address}: BalanceProps) => { 
  const classes = classNames(className, 'Balance'); 
- const { data: dataBalance, isLoading, isError } = useBalance({
+ const { data, isLoading, isError } = useBalance({
     addressOrName: address,
   })
 
   if (isLoading || isError) return null
-  return <div className={classes}>{dataBalance?.formatted} {dataBalance?.symbol}</div>
+  return <div className={classes}>{data?.formatted} {data?.symbol}</div>
 }
 
 export default Balance;

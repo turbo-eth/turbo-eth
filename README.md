@@ -7,6 +7,8 @@
 
 Turbo ETH is an Ethereum dApp Build System; with a suite of tools to start building production ready dApps today.
 
+WARNING: The repo might have breaking changes between July 17th to July 30th.
+
 **Boilerplate:**
 
 - Application ([RainbowKit](https://www.rainbowkit.com/) + Tailwind + Next)
