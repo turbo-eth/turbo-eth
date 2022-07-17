@@ -2,11 +2,11 @@ import classNames from "classnames";
 import * as React from "react";
 import { useEffect } from "react";
 
-interface ColorModeProps {
+interface AppColorModeProps {
   className?: string;
 }
 
-export const ColorMode = ({ className }: ColorModeProps) => {
+export const AppColorMode = ({ className }: AppColorModeProps) => {
   const styleBase = classNames(className, "color-mode cursor-pointer");
   const [mode, setMode] = React.useState<"light" | "dark">("light");
   useEffect(() => {
@@ -38,4 +38,4 @@ export const ColorMode = ({ className }: ColorModeProps) => {
   );
 };
 
-export default ColorMode;
+export default AppColorMode;

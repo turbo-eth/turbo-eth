@@ -53,13 +53,7 @@ const examples = [
   },
   {
     title: "WalletERC20Balance",
-    code: (
-      <WalletERC20Balance
-        className=""
-        msgActive
-        contractAddress={TokenAddress}
-      />
-    ),
+    code: <WalletERC20Balance msgActive contractAddress={TokenAddress} />,
     url: "https://github.com/turbo-eth/turbo-eth/blob/main/packages/erc20-wagmi/src/components/WalletERC20Balance.tsx",
   },
   {
@@ -97,7 +91,7 @@ const Index = () => {
         <a target={"_blank"} href="https://github.com/turbo-eth/turbo-eth">
           <button
             type="button"
-            className="text-white bg-[#24292F] hover:bg-[#24292F]/90 mt-4 bg-black focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
+            className="text-white bg-[#24292F] hover:bg-[#24292F]/90 mt-4 focus:ring-4 focus:outline-none focus:ring-[#24292F]/50 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-500 dark:hover:bg-[#050708]/30 mr-2 mb-2"
           >
             <svg
               className="mr-2 -ml-1 w-4 h-4"
@@ -126,7 +120,11 @@ const Index = () => {
             </h3>
             <div className="grid grid-cols-12 gap-x-4 gap-y-6">
               {examples.map((exm, idx) => (
-                <ModuleComponentPreview key={idx} {...exm} />
+                <ModuleComponentPreview
+                  key={idx}
+                  {...exm}
+                  className="col-span-6"
+                />
               ))}
             </div>
           </IsMounted>

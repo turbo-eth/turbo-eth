@@ -15,7 +15,7 @@ export const AppLogo = ({ className, defaultStyle }: AppLogoProps) => {
   const styleName = classNames(
     className,
     "app-logo",
-    "font-bold text-xl hover:opacity-70",
+    "font-semibold text-sm hover:opacity-70",
     {
       "text-purple-600 hover:text-purple-700": defaultStyle,
     }
@@ -29,4 +29,5 @@ export const AppLogo = ({ className, defaultStyle }: AppLogoProps) => {
     </Link>
   );
 };
+
 export default AppLogo;

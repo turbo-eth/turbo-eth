@@ -309,6 +309,7 @@ importers:
     specifiers:
       '@babel/core': 7.18.5
       '@size-limit/preset-small-lib': ^7.0.8
+      '@turbo-eth/core-wagmi': 0.0.0-beta.0
       '@types/node': ^18.0.0
       '@types/prop-types': ^15.7.5
       '@types/react': ^18.0.14
@@ -329,6 +330,7 @@ importers:
     devDependencies:
       '@babel/core': 7.18.5
       '@size-limit/preset-small-lib': 7.0.8_size-limit@7.0.8
+      '@turbo-eth/core-wagmi': link:../core-wagmi
       '@types/node': 18.0.0
       '@types/prop-types': 15.7.5
       '@types/react': 18.0.14

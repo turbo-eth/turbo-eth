@@ -1,9 +1,8 @@
 import type { ReactNode } from "react";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
-import Link from "next/link";
-
-import { ColorMode } from "@/components/App/ColorMode";
+import { AppColorMode } from "@/components/App/AppColorMode";
 import { AppConfig } from "@/utils/AppConfig";
+import AppLogo from "@/components/App/AppLogo";
 
 type IMainProps = {
   meta: ReactNode;
@@ -11,18 +10,12 @@ type IMainProps = {
 };
 
 const Main = (props: IMainProps) => (
-  <div className="w-full bg-white p-0 px-1 text-gray-700 antialiased dark:bg-gray-700 dark:text-white">
+  <div className="w-full bg-white p-0 text-gray-700 antialiased dark:bg-gray-700 dark:text-white">
     {props.meta}
-
-    <div className="min-h-vh mx-auto h-10 w-full dark:bg-gray-700 dark:bg-gray-700 dark:text-white dark:text-white">
+    <div className="min-h-vh mx-auto h-10 w-full">
       <div className="flex items-center justify-between border-b border-gray-300 px-8 py-4 dark:border-neutral-500 dark:bg-gray-700 dark:text-white">
         <div className=" align-center flex items-center justify-between">
-          <Link href="/">
-            <span className="text-1xl cursor-pointer font-bold text-gray-900 dark:text-white">
-              <span className="text-3l">{AppConfig.emoji}</span>{" "}
-              {AppConfig.title}
-            </span>
-          </Link>
+          <AppLogo />
         </div>
         <div className="text-right">
           <ConnectButton />
@@ -51,7 +44,7 @@ const Main = (props: IMainProps) => (
         <div className="">
           © Copyright {new Date().getFullYear()} {AppConfig.title}
         </div>
-        <ColorMode className="mt-3" />
+        <AppColorMode className="mt-3" />
       </div>
     </div>
   </div>

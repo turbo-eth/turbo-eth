@@ -17,13 +17,13 @@ export const ModuleComponentPreview = ({
   const containerClassName = classNames(
     className,
     "ModuleComponentPreview",
-    "card col-span-6"
+    "card"
   );
   return (
     <div className={containerClassName}>
       <div className="flex items-center justify-between">
         <h4 className="inline-block text-xl font-semibold">{title}</h4>
-        <a className="inline-block" href={url} target="_blank" >
+        <a className="inline-block" href={url} target="_blank">
           View Code
         </a>
       </div>
