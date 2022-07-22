@@ -1,9 +1,9 @@
 {
   "name": "@turbo-eth/core-sol",
-  "version": "0.0.0-beta.0",
+  "version": "0.0.0-beta.1",
   "description": "",
   "main": "index.js",
-  "license": "GPL-3.0",
+  "license": "MIT",
   "private": true,
   "scripts": {
     "cleanup": "rm -rf cache/ artifacts/",

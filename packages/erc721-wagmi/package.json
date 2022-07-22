@@ -1,8 +1,8 @@
 {
   "name": "@turbo-eth/erc721-wagmi",
-  "author": "kames",
+  "author": "Kames Geraghty",
   "module": "dist/erc721-wagmi.esm.js",
-  "version": "0.0.0-beta.0",
+  "version": "0.0.0-beta.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -42,7 +42,7 @@
   "devDependencies": {
     "@babel/core": "7.18.5",
     "@size-limit/preset-small-lib": "^7.0.8",
-    "@turbo-eth/core-wagmi": "0.0.0-beta.0",
+    "@turbo-eth/core-wagmi": "0.0.0-beta.1",
     "@types/node": "^18.0.0",
     "@types/prop-types": "^15.7.5",
     "@types/react": "^18.0.14",
