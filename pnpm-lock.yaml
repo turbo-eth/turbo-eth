@@ -76,6 +76,7 @@ importers:
       typescript: ^4.7.4
       wagmi: 0.6.3
     dependencies:
+      '@babel/core': 7.18.5
       '@rainbow-me/rainbowkit': 0.4.6_y3use23f4rofu476hwaost7sua
       '@turbo-eth/core-wagmi': 0.0.0-beta.2_k6t2kd3lstptwfara3ttgdbmza
       '@turbo-eth/erc20-wagmi': 0.0.0-beta.0_k6t2kd3lstptwfara3ttgdbmza
@@ -93,7 +94,6 @@ importers:
       react-select: 5.4.0_s2cbp6k5h5nm6w2sbqbheevhfq
       wagmi: 0.6.3_l67xwklvrko6ltibq4bas5f3bu
     devDependencies:
-      '@babel/core': 7.18.5
       '@commitlint/cli': 16.3.0
       '@commitlint/config-conventional': 16.2.4
       '@next/bundle-analyzer': 12.2.5
@@ -172,7 +172,6 @@ importers:
       hardhat-ethers: 1.0.1
       hardhat-gas-reporter: 1.0.7
       hardhat-log-remover: 2.0.2
-      husky: ^8.0.1
       lodash: 4.17.5
       node-watch: 0.7.3
       prettier: ^2.6.2
@@ -221,7 +220,6 @@ importers:
       hardhat-ethers: 1.0.1
       hardhat-gas-reporter: 1.0.7_hardhat@2.10.1
       hardhat-log-remover: 2.0.2_hardhat@2.10.1
-      husky: 8.0.1
       lodash: 4.17.5
       node-watch: 0.7.3
       prettier: 2.7.1
@@ -12724,12 +12722,6 @@ packages:
     resolution: {integrity: sha512-A15OmA3FLFRnehvF4ZMocsxTZYvHq4ze7L+AgR1DeHw0xC9vMd4euInY83uqGU9/XXKNnVIEeKc1R8G8nKqtzg==}
     dev: true
 
-  /husky/8.0.1:
-    resolution: {integrity: sha512-xs7/chUH/CKdOCs7Zy0Aev9e/dKOMZf3K1Az1nar3tzlv0jfqnYtu235bstsWTmXOR0EfINrPa97yy4Lz6RiKw==}
-    engines: {node: '>=14'}
-    hasBin: true
-    dev: true
-
   /iconv-lite/0.4.24:
     resolution: {integrity: sha512-v3MXnZAcvnywkTUEZomIActle7RXXeedOR31wwl7VlyoXO4Qi9arvSenNQWne1TcRwhCL1HwLI21bEqdpj8/rA==}
     engines: {node: '>=0.10.0'}
@@ -15369,7 +15361,7 @@ packages:
     resolution: {integrity: sha512-iCix/+z812fUqa6KlOxaTkY6LQQDoXIe/VljXkGIvpygSCmYyhjQpfQVZEVVPezFmUBYXNdabdQ6cYx6JX3yMg==}
     dependencies:
       metro-core: 0.70.3
-      rimraf: 2.6.3
+      rimraf: 2.7.1
     dev: false
 
   /metro-config/0.70.3:
@@ -15603,7 +15595,7 @@ packages:
       mime-types: 2.1.35
       node-fetch: 2.6.7
       nullthrows: 1.1.1
-      rimraf: 2.6.3
+      rimraf: 2.7.1
       serialize-error: 2.1.0
       source-map: 0.5.7
       strip-ansi: 6.0.1
@@ -18450,7 +18442,6 @@ packages:
     hasBin: true
     dependencies:
       glob: 7.2.3
-    dev: true
 
   /rimraf/3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}

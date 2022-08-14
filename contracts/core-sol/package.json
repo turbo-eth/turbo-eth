@@ -38,8 +38,7 @@
     "test": "yarn clean && HIDE_DEPLOY_LOG=true OPTIMIZER_DISABLED=true hardhat test",
     "test:fast": "HIDE_DEPLOY_LOG=true OPTIMIZER_DISABLED=true hardhat test",
     "typechain": "typechain --target=ethers-v5 \"./abis/*.json\" --out-dir \"./types\"",
-    "prepack": "yarn compile",
-    "prepare": "husky install"
+    "prepack": "yarn compile"
   },
   "dependencies": {
     "@openzeppelin/contracts": "^4.7.2"
@@ -78,7 +77,6 @@
     "hardhat-ethers": "1.0.1",
     "hardhat-gas-reporter": "1.0.7",
     "hardhat-log-remover": "2.0.2",
-    "husky": "^8.0.1",
     "lodash": "4.17.5",
     "node-watch": "0.7.3",
     "prettier": "^2.6.2",
