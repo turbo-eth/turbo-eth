@@ -7,12 +7,6 @@
 
 Turbo ETH is an Ethereum dApp Build System; designed to make building Web3 applications fast.
 
-Opinionated, but minimal, TurboETH has everything you need to get started now.
-
-- Application ([RainbowKit](https://www.rainbowkit.com/) + [Tailwind](https://tailwindui.com/) + [Next](https://nextjs.org/))
-- Smart Contracts ([Hardhat](https://hardhat.org/) + [Foundry](https://getfoundry.sh/) + More)
-- Zero-Config TypeScript Modules: ([TSDX](https://tsdx.io/))
-
 ### Installation & Usage
 
 ```sh
