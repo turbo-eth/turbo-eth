@@ -16,9 +16,7 @@
     "check-types": "tsc --noEmit --pretty",
     "test": "jest --watch"
   },
-  "peerDependencies": {
-    "@babel/core": "7.18.5"
-  },
+  "peerDependencies": {},
   "dependencies": {
     "@rainbow-me/rainbowkit": "0.4.6",
     "@turbo-eth/core-wagmi": "0.0.0-beta.2",
