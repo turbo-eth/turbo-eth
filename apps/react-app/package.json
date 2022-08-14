@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "dev:fork": "NEXT_PUBLIC_FORKING_ENABLED=true next dev",
-    "build": "next build",
+    "build": "next build ; next export ; cp -r out ../../public",
     "build:prd": "next build ; next export ; touch out/.nojekyll",
     "export": "next export",
     "start": "next start",
