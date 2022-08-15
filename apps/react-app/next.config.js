@@ -6,8 +6,6 @@ const withBundleAnalyzer = require('@next/bundle-analyzer')({
 module.exports = withBundleAnalyzer({
   assetPrefix: '/',
   basePath: '',
-  outputPath: './out',
-  output: './out',
   trailingSlash: true,
   reactStrictMode: true,
   poweredByHeader: false,
