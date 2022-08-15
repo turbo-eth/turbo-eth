@@ -31,9 +31,6 @@
     "lab:fork": "turbo run lab:fork",
     "clean": "turbo run clean"
   },
-  "overrides": {
-    "usb": "kamescg/turbo"
-  },
   "dependencies": {
     "react": "18.2.0",
     "react-dom": "18.2.0"
