@@ -22,7 +22,7 @@ build
 # misc
 .DS_Store
 *.pem
-./public
+public/
 
 # debug
 npm-debug.log*
